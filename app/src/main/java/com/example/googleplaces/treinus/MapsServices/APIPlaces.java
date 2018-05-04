@@ -12,7 +12,7 @@ public class APIPlaces {
 
     private static Retrofit retrofit = null;
 
-    public static final String GOOGLE_PLACE_API_KEY = "SEM API";
+    public static final String GOOGLE_PLACE_API_KEY = "SEM API"; 
 
     public static String base_url = "https://maps.googleapis.com/maps/api/";
 
