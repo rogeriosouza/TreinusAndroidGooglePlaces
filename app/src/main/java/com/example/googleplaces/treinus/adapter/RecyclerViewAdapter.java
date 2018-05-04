@@ -37,6 +37,7 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
 
 
     private List<Places.Custom> stLstStores;
+    private Context context;
 
     private List<StoreModel> models;
     final String urlphotos ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU&key=AIzaSyBNFTAKdygCi8mGe1-pR2XILQMBu2BnkNA";
@@ -76,9 +77,9 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
 
         holder.setData(stLstStores.get(holder.getAdapterPosition()), holder, models.get(holder.getAdapterPosition()));
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+/*        public void onClick(View view) {
+holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
 
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlphotos));
                 view.getContext().startActivity(browserIntent);
@@ -89,10 +90,11 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
                         .load(urlphotos)
                         .into(holder.imageView);
 
-/*                Toast.makeText(view.getContext(),"achou"+ position + "old"+ holder.getOldPosition(),LENGTH_SHORT).show();*/
+             Toast.makeText(view.getContext(),"achou"+ position + "old"+ holder.getOldPosition(),LENGTH_SHORT).show();
 
             }
-        });
+        });*/
+
 
     }
 
@@ -136,24 +138,16 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
         public void setData(Places.Custom info, MyViewHolder holder, StoreModel storeModel)  {
 
             this.model = storeModel;
-           /* Bitmap bitmap = null;
-
-
-            try {
-                URL url = new URL(urlphotos);
-                bitmap = BitmapFactory.decodeStream((InputStream)url.getContent());
-
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-           */
 
             holder.txtStoreDist.setText(model.distance + "\n" + model.duration);
             holder.txtStoreName.setText(info.name);
             holder.txtStoreAddr.setText(info.vicinity);
+            if (info.photos!=null){
+                String test = "https://maps.googleapis.com/maps/api/place/photo?&photoreference=";
+                Glide.with(((MyViewHolder) holder).itemView.getContext())
+                        .load(test+ info.photos.get(0).photoReference)
+                        .into(holder.imageView);
+            }
         }
 
     }

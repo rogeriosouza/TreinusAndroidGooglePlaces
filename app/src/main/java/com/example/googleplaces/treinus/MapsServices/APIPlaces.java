@@ -7,12 +7,11 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-
 public class APIPlaces {
 
     private static Retrofit retrofit = null;
 
-    public static final String GOOGLE_PLACE_API_KEY = "SEM API"; 
+    public static final String GOOGLE_PLACE_API_KEY = " incluir api";
 
     public static String base_url = "https://maps.googleapis.com/maps/api/";
 
