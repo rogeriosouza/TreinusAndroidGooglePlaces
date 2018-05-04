@@ -138,6 +138,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 break;
                             Places.Custom  info =  results.get(i);
 
+
                             storeModels = new ArrayList<>();
 
 

@@ -20,11 +20,11 @@
             android:orientation="vertical"
             android:padding="5dp">
 
-           <!-- <ImageView
+            <ImageView
                 android:id="@+id/place_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginRight="300dp" />-->
+                android:layout_marginRight="300dp" />
 
             <TextView
                 android:id="@+id/txtStoreName"

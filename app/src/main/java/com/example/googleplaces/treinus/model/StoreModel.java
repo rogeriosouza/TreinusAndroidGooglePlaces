@@ -1,5 +1,7 @@
 package com.example.googleplaces.treinus.model;
 
+import android.widget.ImageView;
+
 /***
  * @author rogerio
  */
