@@ -39,7 +39,7 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
     private List<Places.Custom> stLstStores;
 
     private List<StoreModel> models;
-    final String urlphotos ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU&key=AIzaSyBNFTAKdygCi8mGe1-pR2XILQMBu2BnkNA\\n";
+    final String urlphotos ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU&key=AIzaSyBNFTAKdygCi8mGe1-pR2XILQMBu2BnkNA";
 
     public RecyclerViewAdapter(List<Places.Custom> stores, List<StoreModel> storeModels) {
 
@@ -73,7 +73,7 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
 
-                //"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU&key=AIzaSyBNFTAKdygCi8mGe1-pR2XILQMBu2BnkNA\n";
+
         holder.setData(stLstStores.get(holder.getAdapterPosition()), holder, models.get(holder.getAdapterPosition()));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +103,7 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
 
     @Override
     public void onClick(View view) {
-        
+
 
     }
 
@@ -150,7 +150,7 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
             }
 
            */
-            holder.imageView.setImageResource(info.photos.get(0).htmlAttributions.get(0).charAt(0));
+
             holder.txtStoreDist.setText(model.distance + "\n" + model.duration);
             holder.txtStoreName.setText(info.name);
             holder.txtStoreAddr.setText(info.vicinity);
