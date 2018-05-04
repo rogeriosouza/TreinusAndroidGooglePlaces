@@ -89,7 +89,7 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
                         .load(urlphotos)
                         .into(holder.imageView);
 
-                Toast.makeText(view.getContext(),"achou"+ position + "old"+ holder.getOldPosition(),LENGTH_SHORT).show();
+/*                Toast.makeText(view.getContext(),"achou"+ position + "old"+ holder.getOldPosition(),LENGTH_SHORT).show();*/
 
             }
         });
@@ -103,7 +103,7 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
 
     @Override
     public void onClick(View view) {
-        Log.d(TAG, "onClick " + "dasda" + " " + "");
+        
 
     }
 
@@ -149,7 +149,8 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
                 e.printStackTrace();
             }
 
-            holder.imageView.setImageBitmap(bitmap);*/
+           */
+            holder.imageView.setImageResource(info.photos.get(0).htmlAttributions.get(0).charAt(0));
             holder.txtStoreDist.setText(model.distance + "\n" + model.duration);
             holder.txtStoreName.setText(info.name);
             holder.txtStoreAddr.setText(info.vicinity);

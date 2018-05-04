@@ -17,6 +17,7 @@ public class Places {
 
     public class Source implements Serializable {
 
+
         @SerializedName("results")
         public List<Custom> custom = new ArrayList<>();
         @SerializedName("status")
@@ -25,7 +26,8 @@ public class Places {
 
     public class Custom implements Serializable {
 
-
+        @SerializedName("photos")
+        public List<Photos> photos = new ArrayList<>();
         @SerializedName("geometry")
         public Geometry geometry;
         @SerializedName("vicinity")
@@ -49,6 +51,24 @@ public class Places {
         @SerializedName("lng")
         public String lng;
 
+
+    }
+
+    public class Photos implements Serializable{
+
+
+        @SerializedName("height")
+        @Expose
+        public Integer height;
+        @SerializedName("html_attributions")
+        @Expose
+        public List<String> htmlAttributions = new ArrayList<String>();
+        @SerializedName("photo_reference")
+        @Expose
+        public String photoReference;
+        @SerializedName("width")
+        @Expose
+        public Integer width;
 
     }
 

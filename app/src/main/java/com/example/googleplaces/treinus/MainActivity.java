@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     List<Places.Custom> results;
     List<StoreModel> storeModels;
-    List<Photo> photosModels;
+    List<Places.Custom> photosModels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
