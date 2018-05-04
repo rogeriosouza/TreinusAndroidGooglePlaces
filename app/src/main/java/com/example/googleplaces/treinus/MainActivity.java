@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_main);
 
 
+/*
         permissions.add(ACCESS_FINE_LOCATION);
         permissions.add(ACCESS_COARSE_LOCATION);
         //permissions.add(READ_EXTERNAL_STORAGE);
@@ -87,7 +88,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         } else {
             searchLocation();
         }
-
+        searchLocation();
+*/
 
         apiMapsService = APIPlaces.getClient().create(ApiInterface.class);
 
@@ -252,7 +254,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
-    private ArrayList<String> findUnAskedPermissions(ArrayList<String> wanted) {
+    /*private ArrayList<String> findUnAskedPermissions(ArrayList<String> wanted) {
         ArrayList<String> result = new ArrayList<>();
 
         for (String perm : wanted) {
@@ -319,7 +321,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
+    }*/
 
     private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
         new AlertDialog.Builder(MainActivity.this)
